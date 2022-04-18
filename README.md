@@ -1,6 +1,10 @@
 # cs-356-sucks
 ## Huong shit
 
+To generate html with pandoc command:
+
+``pandoc --toc --standalone --mathjax -f markdown -t html file.md -o file.html``
+
 ---
 ### General Notes
 | Notes | Description
