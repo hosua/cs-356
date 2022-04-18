@@ -5,6 +5,9 @@ To generate html with pandoc command:
 
 ``pandoc --toc --standalone --mathjax -f markdown -t html file.md -o file.html``
 
+To generate pdf (requires texlive):
+``pandoc --toc --standalone --mathjax -f markdown -t pdf file.md -o file.pdf``
+
 ---
 ### General Notes
 | Notes | Description
