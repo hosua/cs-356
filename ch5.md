@@ -52,23 +52,40 @@ recent past) level of congestion.(Examples: RIP, OSPF, and BGP))
 - We need an *inter-autonomous system routing protocol*. Since an inter-AS routing protocol involves coordination among multiple ASs, communicating ASs must run the same inter-AS routing protocol. In fact, in the Internet, all ASs run the same inter-AS routing protocol, called the Border Gateway Protocol, more commonly known as *BGP*
 
 ### 5.4.1 The Role of BGP
-- notes
+- In BGP, packets are not routed to a specific destination address, but instead to CIDRized prefixes, with each prefix representing a subnet or a collection of subnets.
+- As an inter-AS routing protocol, BGP provides each router a means to: Obtain prefix reachability from neighboring ASs and Determine the "best" routes to the prefixes
 
 ### 5.4.2 Advertising BGP Route Information
-- notes
+- For each AS, each router is either a gateway router or an internal router. A gateway router is a router on the edge of an AS that directly connects to one or more routers in other ASs. An internal router connects only to hosts and routers within its own AS.
+- Each such TCP connection, along with all the BGP messages sent
+over the connection, is called a BGP connection. Furthermore, a BGP connection that spans two ASs is called an external BGP (eBGP) connection, and a BGP session between routers in the same AS is called an internal BGP (iBGP) connection.
 
 ### 5.4.3 Determining the Best Routes
-- notes
+- Each such TCP connection, along with all the BGP messages sent over the connection, is called a BGP connection. Furthermore, a BGP connection that spans two ASs is called an external BGP (eBGP) connection, and a BGP session between routers in the same AS is called an internal BGP (iBGP) connection.
+- Here, each BGP route is written as a list with three components: NEXT-HOP; AS-PATH; destination prefix. In practice, a BGP route includes additional attributes, which we will ignore for the time being.
+- **Hot Potato Routing**
+    - As just described, this router will learn about two possible BGP routes to prefix x. In hot potato routing, the route chosen (from among all possible routes) is that route with the least cost to the NEXT-HOP router beginning that route.
+    - In the name “hot potato routing,” a packet is analogous to a hot potato that is burning in your hands. Because it is burning hot, you want to pass it off to another person (another AS) as quickly as possible.
+- **Route-Selection Algorithm**
+    - A route is assigned a local preference value as one of its attributes (in addition to the AS-PATH and NEXT-HOP attributes).
+    - From the remaining routes (all with the same highest local preference value), the route with the shortest AS-PATH is selected. If this rule were the only rule for route selection, then BGP would be using a DV algorithm for path determination, where the distance metric uses the number of AS hops rather than the number of router hops.
+    - From the remaining routes (all with the same highest local preference value and the same AS-PATH length), hot potato routing is used, that is, the route with the closest NEXT-HOP router is selected.
+    - If more than one route still remains, the router uses BGP identifiers to select the route.
 
 ### 5.4.4 IP-Anycast
-- notes
+- In addition to being the Internet’s inter-AS routing protocol, BGP is often used to implement the IP-anycast service
+- Although the above CDN example nicely illustrates how IP-anycast can be used, in practice, CDNs generally choose not to use IP-anycast because BGP routing changes can result in different packets of the same TCP connection arriving at different instances of the Web server.
 
 ### 5.4.5 Routing Policy
-- notes
-
+- When a router selects a route to a destination, the AS routing policy can trump all other considerations, such as shortest AS path or hot potato routing. Indeed, in the route-selection algorithm, routes are first selected according to the local-preference attribute, whose value is fixed by the policy of the local AS.
+- multi-homed access ISP, since it is connected to the rest of the network via two different providers (a scenario that is becoming increasingly common in practice).
+- **Why Are There Diffrent Inter-AS and Intra-AS Routing Protocols?**
+    - Policy. Among ASs, policy issues dominate. It may well be important that traffic originating in a given AS not be able to pass through another specific AS.
+    - Scale. The ability of a routing algorithm and its data structures to scale to handle routing to/among large numbers of networks is a critical issue in inter-AS routing.
+    - Performance. Because inter-AS routing is so policy oriented, the quality (for example, performance) of the routes used is often of secondary concern (that is, a longer or more costly route that satisfies certain policy criteria may well be taken over a route that is shorter but does not meet that criteria).
 ### 5.4.6 Putting the Pieces Together: Obtaining Internet Presence
-- notes
-
+- To meet these goals, you first need to obtain Internet connectivity, which is done by contracting with, and connecting to, a local ISP. Your company will have a gateway router, which will be connected to a router in your local ISP.
+- In addition to contracting with an ISP, you will also need to contract with an Internet registrar to obtain a domain name for your company.
 ## 5.5 The SDN Control Plane
 - notes
 
