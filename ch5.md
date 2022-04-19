@@ -50,7 +50,7 @@ recent past) level of congestion.(Examples: RIP, OSPF, and BGP))
     - Some advantages to using OSPF are Security, Multiple same-cost paths, Integrated support for unicast and multicast routing, Support for hierarchy within a single AS
 ## 5.4 Routing Among the ISPs: BGP
 - We need an *inter-autonomous system routing protocol*. Since an inter-AS routing protocol involves coordination among multiple ASs, communicating ASs must run the same inter-AS routing protocol. In fact, in the Internet, all ASs run the same inter-AS routing protocol, called the Border Gateway Protocol, more commonly known as *BGP*
-//page 410
+
 ### 5.4.1 The Role of BGP
 - notes
 
