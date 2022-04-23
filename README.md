@@ -1,4 +1,4 @@
-# cs-356-sucks
+# cs-356
 ## Huong shit
 
 To generate html with pandoc command:
