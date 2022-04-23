@@ -473,6 +473,46 @@ becomes:
 		* In this case, the network is continuing to deliver some segments from sender to receiver (as indicated by the receipt of duplicate ACKs).
 		* TCP halves the value of *cwnd* (adding in 3 MSS for good measure to account for the triple duplicate ACKs received) and records the value of *ssthresh* to be half the value of *cwnd* when the triple duplicate ACKs were received. The fast-recovery state is then entered.
 
-* **Fast Recovery** 
+
 # LEFT OFF ON PAGE 268
- 
+* **TCP Splitting: Optimizing The Performance of Cloud Services**
+	* One way to mitigate this problem and improve user-perceived performance is to (1) deploy front-end servers closer to the users, and (2) utilize TCP splitting by breaking the TCP connection at the front-end server. With TCP splitting, the client establishes a TCP connection to the nearby front-end, and the front-end maintains a persistent TCP connection to the data center with a very large TCP congestion window
+	* In summary, TCP splitting can reduce the networking delay roughly from 4 #RTT to RTT, significantly improving user-perceived performance, particularly for users who are far from the nearest data center.
+* **Fast Recovery**
+	- In fast recovery, the value of cwnd is increased by 1 MSS for every duplicate ACK received for the missing segment that caused TCP to enter the fast-recovery state.
+	- Eventually, when an ACK arrives for the missing segment, TCP enters the congestion-avoidance state after deflating cwnd.
+	- If a timeout event occurs, fast recovery transitions to the slow-start state after performing the same actions as in slow start and congestion avoidance: The value of cwnd is set to 1 MSS, and the value of ssthresh is set to half the value of cwnd when the loss event occurred.
+	- It is interesting that an early version of TCP, known as TCP Tahoe, unconditionally cut its congestion window to 1 MSS and entered the slow-start phase after either a timeout-indicated or triple-duplicate-ACK-indicated loss event. The newer version of TCP, TCP Reno, incorporated fast recovery.
+* **TCP Congestion Control: Retrospective**
+	- For this reason,TCP congestion control is often referred to as an additive-increase, multiplicative-decrease (AIMD) form of congestion control. AIMD congestion control gives rise to the “saw tooth” behavior shown in Figure 3.53, which also nicely illustrates our earlier intuition of TCP “probing” for bandwidth—TCP linearly increases its congestion window size (and hence its transmission rate) until a triple duplicate-ACK event occurs.
+* **TCP Cubic**
+	- TCP CUBIC differs only slightly from TCP Reno. Once again, the congestion window is increased only on ACK receipt, and the slow start and fast recovery phases remain the same.
+* **Macroscopic Description of TCP Reno Throughput**
+	- average throughput (0.75*W)/RTT
+### 3.7.2 Network-Assisted Explicit Congestion Notification and Delayed-based Congestion Control
+- Explicit Congestion Notification
+	- One setting of the ECN bits is used by a router to indicate that it (the router) is experiencing congestion. This congestion indication is then carried in the marked IP datagram to the destination host, which then informs the sending host, as shown in Figure 3.55. RFC 3168 does not provide a definition of when a router is congested; that decision is a configuration choice made possible by the router vendor, and decided by the network operator.
+	- As shown in Figure 3.55, when the TCP in the receiving host receives an ECN congestion indication via a received datagram, the TCP in the receiving host informs the TCP in the sending host of the congestion indication by setting the ECE (Explicit Congestion Notification Echo) bit (see Figure 3.29) in a receiver-to-sender TCP ACK segment.
+- Delay-Based Congestion Control
+	- In TCP Vegas [Brakmo 1995], the sender measures the RTT of the source-to-destination path for all acknowledged packets. Let RTTmin be the minimum of these measurements at a sender; this occurs when the path is uncongested and packets experience minimal queueing delay.
+	- TCP Vegas operates under the intuition that TCP senders should “Keep the pipe just full, but no fuller”
+### 3.7.3 Fairness
+- Is TCP’s AIMD algorithm fair, particularly given that different TCP connec-
+tions may start at different times and thus may have different window sizes at a given point in time?
+- Suppose that the TCP window sizes are such that at a given point in time, con-
+nections 1 and 2 realize throughputs indicated by point A in Figure 3.56. Because the amount of link bandwidth jointly consumed by the two connections is less than R, no loss will occur, and both connections will increase their window by 1 MSS per RTT as a result of TCP’s congestion-avoidance algorithm.
+* **Fairness and UDP**
+	- Many multimedia applications, such as Internet phone and video conferencing, often do not run over TCP for this very reason—they do not want their transmission rate throttled, even if the network is very congested. Instead, these applications prefer to run over UDP, which does not have built-in congestion control. When running over UDP, applications can pump their audio and video into the network at a constant rate and occasionally lose packets, rather than reduce their rates to “fair” levels at times of congestion and not lose any packets.
+* **Fairness and Parallel TCP Connections**
+	- This is because there is nothing to stop a TCP-based application from using multiple parallel connections. For example, Web browsers often use multiple parallel TCP connections to transfer the multiple objects within a Web page. (The exact number of multiple connections is configurable in most browsers.) When an application uses multiple parallel connections, it gets a larger fraction of the bandwidth in a congested link.
+## 3.8 Evolution of Transport-Layer Functionality
+- **QUIC: Quick UDP Internet Connections**
+	- Connection-Oriented and Secure. Like TCP, QUIC is a connection-oriented protocol between two endpoints. This requires a handshake between endpoints to set up the QUIC connection state.
+	- Streams. QUIC allows several different application-level “streams” to be multiplexed through a single QUIC connection, and once a QUIC connection is established, new streams can be quickly added.
+	- Reliable, TCP-friendly congestion-controlled data transfer. As illustrated in Figure 3.59(b), QUIC provides reliable data transfer to each QUIC stream separately. Figure 3.59(a) shows the case of HTTP/1.1 sending multiple HTTP requests, all over a single TCP connection.
+	- it’s worth highlighting again that QUIC is an application-layer protocol providing reliable, congestion-controlled data transfer between two endpoints.
+## 3.9 Summary
+- We learned in Section 3.4 that a transport-layer protocol can provide reliable data transfer even if the underlying network layer is unreliable.
+- In Section 3.5, we took a close look at TCP, the Internet’s connection-oriented and reliable transport-layer protocol. We learned that TCP is complex, involving connection management, flow control, and round-trip time estimation, as well as reliable data transfer.
+- In Section 3.6, we examined congestion control from a broad perspective, and in Section 3.7, we showed how TCP implements congestion control.
+- In Chapter 1, we said that a computer network can be partitioned into the“network edge” and the “network core.” The network edge covers everything that happens in the end systems.
