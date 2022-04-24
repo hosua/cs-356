@@ -1,8 +1,9 @@
 # cs-356
 ## Huong shit
 
-To generate html with pandoc command:
+[Link to html](http://24.184.108.245:420/school.html)
 
+To generate html with pandoc command:
 ``pandoc --standalone --mathjax -f markdown -t html file.md -o file.html``
 
 To generate pdf (requires texlive):
