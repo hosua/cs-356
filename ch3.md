@@ -473,8 +473,6 @@ becomes:
 		* In this case, the network is continuing to deliver some segments from sender to receiver (as indicated by the receipt of duplicate ACKs).
 		* TCP halves the value of *cwnd* (adding in 3 MSS for good measure to account for the triple duplicate ACKs received) and records the value of *ssthresh* to be half the value of *cwnd* when the triple duplicate ACKs were received. The fast-recovery state is then entered.
 
-
-# LEFT OFF ON PAGE 268
 * **TCP Splitting: Optimizing The Performance of Cloud Services**
 	* One way to mitigate this problem and improve user-perceived performance is to (1) deploy front-end servers closer to the users, and (2) utilize TCP splitting by breaking the TCP connection at the front-end server. With TCP splitting, the client establishes a TCP connection to the nearby front-end, and the front-end maintains a persistent TCP connection to the data center with a very large TCP congestion window
 	* In summary, TCP splitting can reduce the networking delay roughly from 4 #RTT to RTT, significantly improving user-perceived performance, particularly for users who are far from the nearest data center.
