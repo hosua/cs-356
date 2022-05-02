@@ -13,13 +13,14 @@ The content of the format of message exchange
 ### FILL
 You are installing Git, a screen shows the following:
 
-This means Git uses HTTPS, a secure communication 
-__
+This means Git uses HTTPS, a secure communication ________
+
 1. **PROTOCOL**
-__
+
 where two machines can communicate securely over the network by encrypting the data in the _________
 
 1. ~~TRANSPORT~~
+
 layer to provide privacy and data integrity between two or more communicating computer applications.
 
 ### FILL
