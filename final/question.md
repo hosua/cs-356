@@ -81,80 +81,101 @@ ___
 A:
 ___
 25Q:\
+A: X allows the HTTP server to store a X file which contains URLs for each chunk of a video by bit-rate version. While downloading chunks, X measure(s) the received bandwidth to determine which URL should be next.
+___
+26Q:A Content Distribution Networks (CDNs) installs many geographically distributed ______ (a.k.a. proxy servers) throughout the region it services, thereby localizing much of the traffic.\
 A:
 ___
-26Q:\
+27Q:It takes 75ms to reach from your host to the cloud where you run two machines. It takes roughly 2 ms to traverse from one VM to another. Sitting from your home, you ssh into one network then ping the other one. How long in ms will it take roughly after you type ‘ping x.x.x.x’ in the terminal to get the response from the other one?\
 A:
 ___
-27Q:\
+28Q:We use end-point authentication to determine with certainty the\
+A: X of a message. Authentication is needed because it is X to hand-craft a packet with an arbitrary source /destination address and port number. This ability is known as X
+___
+29Q:There are M paths from source to destination. Denote R_i_k the transmission rate of link i in path k. No two paths shared the same link. If the server can only use 1 path, what is the maximum throughput?\
 A:
 ___
-28Q:\
-A:
-___
-29Q:\
-A:
-___
-30Q:\
+30Q:Based on the provided graph following TCP Reno, enter the transmission round(s) at which the value of ssthresh changes in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'.Initial ssthresh = 8.\
+![Alt text](30.png "question")\
 A:
 ___
 31Q:\
+A: X protocol provides the ability to translate hostnames to IP addresses. Without appropriate entries within it, no one can access a website even if it is of a too-big-too-fail company such as facebook.com. It is a X -layer protocol and is a great example of the design philosophy that much of the complexity in the Internet architecture is located at the X of the network.
+___
+32Q:When you watch Netflix, you know that the content is being streamed either from an access ISP or from a server at a nearby Internet exchange point that has Netflix CDN server rack installed within it. This is possible thanks to the fact that Netflix uses DNS to redirect to connect a particular client to a CDN server.\
+A: X:t/f???
+___
+33Q:Based on the provided graph following TCP Reno, enter the transmission round(s) at which the value of ssthresh changes in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
+![Alt text](33.png "question")\
 A:
 ___
-32Q:\
+34Q:Given\
+d: distance between each pair of network devices\
+R: the link’s transmission rate\
+a: average rate of arrival\
+L: packet length\
+s: propagation speed\
+t1: time to examine packet’s header to determine forwarding action\
+t2: time to perform bit-level error check\
+Identify the types of delay in packet-switched networks. Choose all that apply.\
 A:
 ___
-33Q:\
+35Q:For the vast number of technological start-ups, which layer are they mostly working in considering the five-layer Internet protocol stack?\
 A:
 ___
-34Q:\
+36Q:Based on the provided graph following TCP Reno, enter the minimum value of ssthresh. Initial ssthresh = 8.\
+![Alt text](36.png "question")\
 A:
 ___
-35Q:\
+37Q:Multiple ISPs can peer together at\
+A:X. Any ISP (except for tier-1 ISP) can choose to X  to connect to two or more provider ISPs. This means that in the event that one of its provider IPSs is down, it can still continue to send and receive packets into the Internet.
+___
+38Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.\
+One of the biggest costs of congestion is that _____________ transmission capacity and buffering are wasted for every packet lost _______________.\
 A:
 ___
-36Q:\
+39Q:You are requesting a webpage with three images stored in three different servers. One of the images  resides on the same server as the webpage. Assuming that you are using HTTP/1.1, and your web browser can open up to 3 parallel connections. Ignore transmission time, how many persistent TCP connections will you need? And how many RTTs will you need to get the entire web page displayed? Type your answer in the order of the question asked, separated by a comma, no unit of measurement should be used, no space\
 A:
 ___
-37Q:\
+40Q:![Alt text](40.png "question")\
+Suppose there is a router between two hosts and no other traffic than two packets to be sent from host A to host B. Suppose that the red (i.e. thinner) link is the bottleneck link. Also, suppose that the server sends the second packet T second after sending the first packet. Each packet is of L bits. What is min(T) to ensure no queuing in the router between these two hosts?\
 A:
 ___
-38Q:\
+41Q:Mail servers form the core of the e-mail \
+A: X. These servers communicate with each other using X. As with most application-layer protocols, it has two sides: client side and server side, both of which run on every mail server.
+___
+42Q:45 Terabytes need to be sent from Boston to Los Angeles. FedEx overnight will reach the destination in 12.5 hours. If a dedicated link can be used to send the data, what should be its transmission rate (Mbps) to break even?\
 A:
 ___
-39Q:\
+43Q:![Alt text](43.png "question")\
+A packet has just arrived. Before it are five packets, one of which has 10 bits already transmitted. All packets are transmitted following FIFO.  How long before the first bit of the red packet is transmitted out? All packets have size L bits. Transmission rate is R.\
 A:
 ___
-40Q:\
+44Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection experiences a triple-duplicated-ack event in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
+![Alt text](44.png "question")\
 A:
 ___
-41Q:\
+45Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection is in Fast Recovery phase in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
+![Alt text](45.png "question")\
 A:
 ___
-42Q:\
+46Q:You are installing Git, a screen shows the following:\
+![Alt text](46.png "question")\
+What does this tell you about this git installation? Use what you’ve learned in class to choose the best answer.\
 A:
 ___
-43Q:\
+47Q:The router is performing UDP Checksum. It receives the following data: 10101010 10101010 11110000 11110000. Enter the expected checksum.\
 A:
 ___
-44Q:\
+48Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.\
+TCP _______ limits the amount of unACKed data to TCP ________’s free buffer space to ensure the buffer will not overflow. It will have to track two variables, they are lastbysent and lastbyteacked\
 A:
 ___
-45Q:\
+49Q:In general, an application-layer protocol does NOT define:\
 A:
 ___
-46Q:\
-A:
-___
-47Q:\
-A:
-___
-48Q:\
-A:
-___
-49Q:\
-A:
-___
-50Q:\
-A:
+50Q:You are installing Git, a screen shows the following:\
+![Alt text](50.png "question")\
+What does this tell you about this git installation? Use what you’ve learned in class to choose the best answer. \
+A: This means Git uses HTTPS, a secure communication X where two machines can communicate securely over the network by encrypting the data in the X  layer to provide privacy and data integrity between two or more communicating computer applications.
 ___
