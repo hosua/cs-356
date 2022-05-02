@@ -146,3 +146,17 @@ they are lastbysent and lastbyteacked
 
 Answer: 
 **sender,receiver**
+
+### FILL
+You are at home and have in front of you two laptops. You intend to ssh from one computer to another but using the NJIT network. 
+Realistically, select what you need to achieve your goal:
+
+to obtain an IP address internally to NJIT
+1. Cisco AnyConnect
+2. **DHCP Server**
+
+to ssh from client to server
+1. **openSSH**
+2. LAN
+3. RSA
+4. IMAP
