@@ -253,7 +253,6 @@ TCP _______ limits the amount of unACKed data to TCP ________’s free buffer sp
 A:
 ___
 49Q:In general, an application-layer protocol does NOT define:
-In general, an application-layer protocol does NOT define:
 
 A:
 1. The syntax of various message types
@@ -261,6 +260,8 @@ A:
 3. The type of messages exchanged
 4. The usage of each field
 5. The format of the message exchanged
+6. The content of the format of message exchange
+7. **Rules of when and how a message is sent or received**
 
 ___
 50Q:You are installing Git, a screen shows the following:\
