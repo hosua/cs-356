@@ -3,10 +3,23 @@ ___
 A:
 ___
 2Q:How many more handshakes happen for a connection employing TCP than a connection employing UDP?\
-A:
+A: 3. UDP Requires 0, TCP requires 3.
 ___
 3Q:What are the generally accepted characteristics of message segmentation in terms of the following? (time count when applicable)\
-A:1.X Overhead 2.X Retransmission 3.X Loss 4.X Delay
+A: chegg this https://www.chegg.com/homework-help/questions-and-answers/generally-accepted-characteristics-message-segmentation-terms-following-time-count-applica-q89968937
+1. _______ overhead
+    * more
+    * less/fewer
+2. _______ retransmission
+    * more
+    * less/fewer
+3. _______ loss
+    * more
+    * less/fewer
+4. ________ delay
+    * more 
+    * less/fewer
+
 ___
 4Q:Once you purchase your domain name from an Internet registrar, you either can use the name servers they provide or update them with your own name servers and their corresponding IP addresses. The type(s) of these DNS servers is/are\
 A: X nd the type(s) of DNS records to be inserted into the DNS distributed database include(s) X
@@ -93,15 +106,15 @@ ___
 They upload their videos from client to server over __________
 
 1. **HTTP**
-2. fill
-3. these
-4. out
+2. IMAP
+3. DASH
+4. SMTP
 
 Not only that, YouTube videos streamed from server to client over  __________
 1. ~~DASH~~
-2. fill
-3. these
-4. out
+2. **HTTP**
+3. TCP  
+4. BGP
 ___
 19Q:HTTP/2 solves the Head-of-line blocking by breaking each message into small frames, and interleaving the request and response messages on\
 A: X. In addition, it can send multiple responses for a single client request. This ability is known as X
@@ -156,6 +169,12 @@ Time in hours: 12.5
 ___
 23Q:There are M paths from source to destination. Denote R_i_k the transmission rate of link i in path k. No two paths shared the same link. If the server can use all paths, what is the maximum throughput?\
 A:
+* max(sum{R_i_k}) for i = 1 … M and k = 1 … n
+* sum(product{R_i_k}) for i = 1… n and k = 1 … M
+* sum(max{R_i_k}) for i = 1 … M and k = 1 … n
+* product(min{R_i_k}) for i = 1 … n and k = 1 … M
+* **sum(min{R_i_k}) for i = 1 … n and k = 1 … M**
+![164](164.png)
 ___
 24Q:You have four routers connecting to each other in a way that each router can be directly connected to the other three. How many subnets are there in this setup?\
 A:
@@ -169,8 +188,20 @@ ___
 27Q:It takes 75ms to reach from your host to the cloud where you run two machines. It takes roughly 2 ms to traverse from one VM to another. Sitting from your home, you ssh into one network then ping the other one. How long in ms will it take roughly after you type ‘ping x.x.x.x’ in the terminal to get the response from the other one?\
 A:
 ___
-28Q:We use end-point authentication to determine with certainty the\
-A: X of a message. Authentication is needed because it is X to hand-craft a packet with an arbitrary source /destination address and port number. This ability is known as X
+28Q:We use end-point authentication to determine with certainty the _________
+* **source**
+* destination
+
+of a message. Authentication is needed because it is ________ 
+* sometimes possible
+* **easy**
+
+to hand-craft a packet with an arbitrary source /destination address and port number. This ability is known as _________
+* injecting
+* self-replicating
+* **IP spoofing**
+* man-in-the-middle
+
 ___
 29Q:There are M paths from source to destination. Denote R_i_k the transmission rate of link i in path k. No two paths shared the same link. If the server can only use 1 path, what is the maximum throughput?\
 A:
@@ -203,6 +234,12 @@ A:
 ___
 35Q:For the vast number of technological start-ups, which layer are they mostly working in considering the five-layer Internet protocol stack?\
 A:
+* Network layer
+* Link layer
+* Physical layer
+* **Application layer**
+* Transport layer
+
 ___
 36Q:Based on the provided graph following TCP Reno, enter the minimum value of ssthresh. Initial ssthresh = 8.\
 ![Alt text](36.png "question")\
@@ -222,8 +259,17 @@ ___
 Suppose there is a router between two hosts and no other traffic than two packets to be sent from host A to host B. Suppose that the red (i.e. thinner) link is the bottleneck link. Also, suppose that the server sends the second packet T second after sending the first packet. Each packet is of L bits. What is min(T) to ensure no queuing in the router between these two hosts?\
 A:
 ___
-41Q:Mail servers form the core of the e-mail \
-A: X. These servers communicate with each other using X. As with most application-layer protocols, it has two sides: client side and server side, both of which run on every mail server.
+41Q:Mail servers form the core of the e-mail  _______ 
+* infrastructure
+* architecture 
+* ~~backbone~~ <-- I think this one was wrong
+
+These servers communicate with each other using _________. 
+* **SMTP**
+* HTTPS
+* mail agent
+* IMAP
+As with most application-layer protocols, it has two sides: client side and server side, both of which run on every mail server.
 ___
 42Q:45 Terabytes need to be sent from Boston to Los Angeles. FedEx overnight will reach the destination in 12.5 hours. If a dedicated link can be used to send the data, what should be its transmission rate (Mbps) to break even?\
 A:
