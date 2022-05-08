@@ -120,7 +120,7 @@ ___
 A: X. In addition, it can send multiple responses for a single client request. This ability is known as X
 ___
 20Q:The difference between selective repeat and go-back-N is the number of timers it needs tracking. Denote the number of packets sent but not yet ack’ed = a, the number of packets sent and ack’ed = b, the size of the window = N, the number of slots useable but not yet sent = c. What is the number of timers that selective repeat needs tracking at any moment?\
-A:
+A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/difference-selective-repeat-go-back-n-number-timers-needs-tracking-denote-number-packets-s-q89965554 
 ___
 21Q:This is an example of Connectionless Demultiplexing. Type your answer without space in order of the ‘?’ from top to bottom, separated by commas.\
 ![Alt text](21.png "question")\
@@ -177,16 +177,16 @@ A:
 ![164](164.png)
 ___
 24Q:You have four routers connecting to each other in a way that each router can be directly connected to the other three. How many subnets are there in this setup?\
-A:
+A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/four-routers-connecting-way-router-directly-connected-three-many-subnets-setup-q89744416
 ___
 25Q:\
 A: X allows the HTTP server to store a X file which contains URLs for each chunk of a video by bit-rate version. While downloading chunks, X measure(s) the received bandwidth to determine which URL should be next.
 ___
 26Q:A Content Distribution Networks (CDNs) installs many geographically distributed ______ (a.k.a. proxy servers) throughout the region it services, thereby localizing much of the traffic.\
-A:
+A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/fill-blank-1-word-space-front-comma-content-distribution-networks-cdns-installs-many-geogr-q89744144  
 ___
 27Q:It takes 75ms to reach from your host to the cloud where you run two machines. It takes roughly 2 ms to traverse from one VM to another. Sitting from your home, you ssh into one network then ping the other one. How long in ms will it take roughly after you type ‘ping x.x.x.x’ in the terminal to get the response from the other one?\
-A:
+A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/takes-75ms-reach-host-cloud-run-two-machines-takes-roughly-2-ms-traverse-one-vm-another-si-q89860925
 ___
 28Q:We use end-point authentication to determine with certainty the _________
 * **source**
@@ -205,6 +205,10 @@ to hand-craft a packet with an arbitrary source /destination address and port nu
 ___
 29Q:There are M paths from source to destination. Denote R_i_k the transmission rate of link i in path k. No two paths shared the same link. If the server can only use 1 path, what is the maximum throughput?\
 A:
+* max(min{R_i_k}) for i = 1 … M and k = 1 … n 
+* min(max{R_i_k}) for i = 1 … M and k = 1 … n 
+* min(max{R_i_k}) for i = 1 … n and k = 1 … M 
+* **max(min{R_i_k}) for i = 1 ... n and k = 1 … M**
 ___
 30Q:Based on the provided graph following TCP Reno, enter the transmission round(s) at which the value of ssthresh changes in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'.Initial ssthresh = 8.\
 ![Alt text](30.png "question")\
@@ -231,6 +235,10 @@ t1: time to examine packet’s header to determine forwarding action\
 t2: time to perform bit-level error check\
 Identify the types of delay in packet-switched networks. Choose all that apply.\
 A:
+* Transmission delay = L/R
+* Propagation delay = s/d
+* Processing delay = t1 + t2
+* Queuing delay (varies at each node)
 ___
 35Q:For the vast number of technological start-ups, which layer are they mostly working in considering the five-layer Internet protocol stack?\
 A:
@@ -250,10 +258,10 @@ A:X. Any ISP (except for tier-1 ISP) can choose to X  to connect to two or more 
 ___
 38Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.\
 One of the biggest costs of congestion is that _____________ transmission capacity and buffering are wasted for every packet lost _______________.\
-A:
+A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/fill-blank-one-word-separate-answer-using-commas-space-front-comma-one-biggest-costs-conge-q89745991
 ___
 39Q:You are requesting a webpage with three images stored in three different servers. One of the images  resides on the same server as the webpage. Assuming that you are using HTTP/1.1, and your web browser can open up to 3 parallel connections. Ignore transmission time, how many persistent TCP connections will you need? And how many RTTs will you need to get the entire web page displayed? Type your answer in the order of the question asked, separated by a comma, no unit of measurement should be used, no space\
-A:
+A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/requesting-webpage-three-images-stored-three-different-servers-one-images-resides-server-w-q89745025
 ___
 40Q:![Alt text](40.png "question")\
 Suppose there is a router between two hosts and no other traffic than two packets to be sent from host A to host B. Suppose that the red (i.e. thinner) link is the bottleneck link. Also, suppose that the server sends the second packet T second after sending the first packet. Each packet is of L bits. What is min(T) to ensure no queuing in the router between these two hosts?\
@@ -272,11 +280,15 @@ These servers communicate with each other using _________.
 As with most application-layer protocols, it has two sides: client side and server side, both of which run on every mail server.
 ___
 42Q:45 Terabytes need to be sent from Boston to Los Angeles. FedEx overnight will reach the destination in 12.5 hours. If a dedicated link can be used to send the data, what should be its transmission rate (Mbps) to break even?\
-A:
+A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/45-terabytes-need-sent-boston-los-angeles-fedex-overnight-reach-destination-125-hours-dedi-q89965501
 ___
 43Q:![Alt text](43.png "question")\
 A packet has just arrived. Before it are five packets, one of which has 10 bits already transmitted. All packets are transmitted following FIFO.  How long before the first bit of the red packet is transmitted out? All packets have size L bits. Transmission rate is R.\
 A:
+* (4*L-10)/R 
+* 5*L/R - 10 
+* **(5*L-10)/R**
+* 5*L/R 
 ___
 44Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection experiences a triple-duplicated-ack event in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](44.png "question")\
@@ -290,9 +302,14 @@ ___
 ![Alt text](46.png "question")\
 What does this tell you about this git installation? Use what you’ve learned in class to choose the best answer.\
 A:
-___
+1. I can use SSH to secure all connections initiated from the Git remote repository via a three-way handshake.
+2. **I can use SSH as a cryptographic network protocol to communicate over the network to clone a repository or make an update to one. 
+This has two benefits: no repetitive authentication potential (i.e. with setup of key pairs) thus saving time, and my connection is secure.**
+3. I can use SSH as a cryptographic network protocol to communicate over the network to clone a repository or make an update to one. This has one benefit: my connection is secure.
+4. The screenshot is not possible technically speaking.
+
 47Q:The router is performing UDP Checksum. It receives the following data: 10101010 10101010 11110000 11110000. Enter the expected checksum.\
-A:
+A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/router-performing-udp-checksum-receives-following-data-10101010-10101010-11110000-11110000-q89745210
 ___
 48Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.\
 TCP _______ limits the amount of unACKed data to TCP ________’s free buffer space to ensure the buffer will not overflow. It will have to track two variables, they are lastbysent and lastbyteacked\
@@ -318,16 +335,17 @@ A:
 This means Git uses HTTPS, a secure communication ________
 
 1. **PROTOCOL**
-2. fill
-3. these
-4. out
+2. channel
+3. language
+4. setup
    
 where two machines can communicate securely over the network by encrypting the data in the _________
 
-1. ~~TRANSPORT~~
-2. fill
-3. these
-4. out
+1. **APPLICATION**
+2. link
+3. transport
+4. physical
+5. network
 
 layer to provide privacy and data integrity between two or more communicating computer applications.
 ___
