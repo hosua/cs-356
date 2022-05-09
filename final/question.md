@@ -1,6 +1,11 @@
 ___
 1Q: You bring two laptops to NJIT, you intend to ssh from one computer to another, select what networking technologies you’ve learnt in CS356 that would NOT be involved in achieving this goal:\
 A:
+* **HTTPS**
+* ~~DHCP~~
+* ~~NAT~~
+* ssh/openSSH
+* ifconfig/ipconfig
 ___
 2Q:How many more handshakes happen for a connection employing TCP than a connection employing UDP?\
 A: 3. UDP Requires 0, TCP requires 3.
@@ -21,12 +26,12 @@ ___
 A: ________ 
 * ~~root~~
 * ~~top-level domain~~
-* authoritative
+* **authoritative**
 * local
 
 and the type(s) of DNS records to be inserted into the DNS distributed database include(s) ________
 * NS
-* NS and A
+* **NS and A**
 * ~~NS and MX~~
 * ~~A~~
 * A and MX
@@ -36,7 +41,7 @@ ___
 A: Most major e-commerce sites use _______.
 
 1. proxy servers
-2. **cookies** <-- I believe this was right, not 100%.
+2. **cookies** <-- I believe this was right, not 100%. (I double checked, this is right)
 3. extra memory
 4. caches
 5. load balancers
@@ -64,7 +69,7 @@ ___
 A: X packets to the destination. Each of these packets will be sent to the destination and marked by a number. These numbers are X. When the i-th router receives the i-th marked packet, it will send a message back to the source. The source will record the name and IP address of the network device that it receives the message from. In addition, the source can determine the round-trip delays to all routers measured in X.
 ___
 8Q:You walk down the electronic aisle in a shopping center, you pick up a device that boasts the following: “Homes come in all shapes and sizes. This device is designed to provide medium-sized homes with superior WiFi connectivity for fast, lag-free gaming, video streaming, and surfing. Certified with Xfinity with speeds up to 200Mbps and with Cox service speeds of 150Mbps. (This product does not support home phone services from cable providers).” Based on this description, the type of this network device is\
-A: X. It can be used to X
+A: **a wifi-router and modem combo**. It can be used to **connect with listed ISPs and wireless devices inside my home**
 ___
 9Q:You are considering Verizon Fios as your ISP. You notice the difference between Fios and other \
 A: ________
@@ -148,7 +153,7 @@ A:
 5. ~~10.1.0.0~~
 ___
 17Q:Wireshark is capable of real-time intrusion detection. To determine whether the traffic is normal, the user has to compare Wireshark's network reports against several benchmarks: networks of the same business size and type, previous network reports, network expectations based on original intended design.\
-A: X:t/f???
+A: False
 ___
 18Q:Content creators upload to Youtube several million videos everyday. 
 They upload their videos from client to server over __________
@@ -335,10 +340,10 @@ t1: time to examine packet’s header to determine forwarding action\
 t2: time to perform bit-level error check\
 Identify the types of delay in packet-switched networks. Choose all that apply.\
 A:
-* Transmission delay = L/R
-* Propagation delay = s/d
-* Processing delay = t1 + t2
-* Queuing delay (varies at each node)
+* **Transmission delay = L/R**
+* **Propagation delay = s/d**
+* **Processing delay = t1 + t2**
+* **Queuing delay (varies at each node)**
 ___
 35Q:For the vast number of technological start-ups, which layer are they mostly working in considering the five-layer Internet protocol stack?\
 A:
@@ -354,7 +359,7 @@ ___
 A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-minimum-value-ssthresh-initial-ssthresh-8-q89745332
 ___
 37Q:Multiple ISPs can peer together at\
-A:X. Any ISP (except for tier-1 ISP) can choose to X  to connect to two or more provider ISPs. This means that in the event that one of its provider IPSs is down, it can still continue to send and receive packets into the Internet.
+A:**IXP**. Any ISP (except for tier-1 ISP) can choose to **multi-home** to connect to two or more provider ISPs. This means that in the event that one of its provider IPSs is down, it can still continue to send and receive packets into the Internet.
 ___
 38Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.\
 One of the biggest costs of congestion is that _____________ transmission capacity and buffering are wasted for every packet lost _______________.\
@@ -403,9 +408,9 @@ A:
 * L/(R_s - R_c) 
 ___
 41Q:Mail servers form the core of the e-mail  _______ 
-* infrastructure
+* **infrastructure**
 * architecture 
-* ~~backbone~~ <-- I think this one was wrong
+* backbone
 
 These servers communicate with each other using _________. 
 * **SMTP**
@@ -502,7 +507,7 @@ So, the checksum is = 0110010001100100
 ___
 48Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.\
 TCP _______ limits the amount of unACKed data to TCP ________’s free buffer space to ensure the buffer will not overflow. It will have to track two variables, they are lastbysent and lastbyteacked\
-A:
+A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/fill-blank-one-word-separate-answer-using-commas-space-front-comma-tcp-limits-amount-unack-q89745793 
 ___
 49Q:In general, an application-layer protocol does NOT define:
 
