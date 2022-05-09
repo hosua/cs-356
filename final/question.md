@@ -71,15 +71,15 @@ A: ________
 * WAN
 * region
 * access
-* ~~LAN~~ <-- One of these were right
+* **LAN** 
 * last mile
 
  ISPs. Other ISPs use both coaxial cable and fiber options while Fios offers a 100% fiber-optic network, and was one of the first ISPs to offer 100% “Fiber to the Home” (FTTH) internet services to residential customers. Many other providers use fiber-to-the-node (FTTN) connections, which use fiber cables to carry data to a hub close to your home and then switch to coaxial cables or copper wire for the ________.
  * WAN
  * region
- * access
+ * **access**
  * LAN
- * ~~last mile~~ <-- One of these were right
+ * last mile
 
 ___
 10Q: Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection is in the slow-start phase in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
@@ -95,10 +95,10 @@ From the given diagram, the threshold value change at point 8,15,22,31,35
 
 ___
 11Q:Select the main application-layer protocol and corresponding underlying transport protocol for several popular applications:\
-A: Electronic mail: X,X
-Remote terminal access: X,X
-Streaming multimedia: X,X
-Web browser: X,X
+A: Electronic mail: SMTP,TCP
+Remote terminal access: Telnet,TCP
+Streaming multimedia: DASH,TCP
+Web browser: HTTP,TCP
 ___
 12Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection experiences a time-out event in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](12.png "question")\
@@ -235,20 +235,20 @@ ___
 25Q:\
 A: ________
 * QUIC
-* DASH
+* **DASH**
 * DNS
 * DHCP
 
 allows the HTTP server to store a ________
 * dynamic
-* manifes
+* **manifest**
 * latent
 * hidden
  
 file which contains URLs for each chunk of a video by bit-rate version. While downloading chunks, ________
 * both the client and server
 * the server
-* the client
+* **the client**
  
 measure(s) the received bandwidth to determine which URL should be next.
 ___
@@ -323,7 +323,7 @@ ___
 ___
 33Q:Based on the provided graph following TCP Reno, enter the transmission round(s) at which the value of ssthresh changes in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](33.png "question")\
-A:
+A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-transmission-round-s-value-ssthresh-changes--q89744557
 ___
 34Q:Given\
 d: distance between each pair of network devices\
@@ -351,7 +351,7 @@ A:
 ___
 36Q:Based on the provided graph following TCP Reno, enter the minimum value of ssthresh. Initial ssthresh = 8.\
 ![Alt text](36.png "question")\
-A:
+A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-minimum-value-ssthresh-initial-ssthresh-8-q89745332
 ___
 37Q:Multiple ISPs can peer together at\
 A:X. Any ISP (except for tier-1 ISP) can choose to X  to connect to two or more provider ISPs. This means that in the event that one of its provider IPSs is down, it can still continue to send and receive packets into the Internet.
@@ -397,6 +397,10 @@ ___
 40Q:![Alt text](40.png "question")\
 Suppose there is a router between two hosts and no other traffic than two packets to be sent from host A to host B. Suppose that the red (i.e. thinner) link is the bottleneck link. Also, suppose that the server sends the second packet T second after sending the first packet. Each packet is of L bits. What is min(T) to ensure no queuing in the router between these two hosts?\
 A:
+* **L/R_c - L/R_s**
+* L/(R_c - R_s)
+* L/R_s - L/R_c
+* L/(R_s - R_c) 
 ___
 41Q:Mail servers form the core of the e-mail  _______ 
 * infrastructure
