@@ -55,7 +55,7 @@ A: X ISPs. Other ISPs use both coaxial cable and fiber options while Fios offers
 ___
 10Q: Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection is in the slow-start phase in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](10.png "question")\
-A:
+A: Chegg this shit https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-transmission-round-s-value-ssthresh-changes--q89744557
 ___
 11Q:Select the main application-layer protocol and corresponding underlying transport protocol for several popular applications:\
 A: Electronic mail: X,X
@@ -187,6 +187,7 @@ A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/fill-blank-1
 ___
 27Q:It takes 75ms to reach from your host to the cloud where you run two machines. It takes roughly 2 ms to traverse from one VM to another. Sitting from your home, you ssh into one network then ping the other one. How long in ms will it take roughly after you type ‘ping x.x.x.x’ in the terminal to get the response from the other one?\
 A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/takes-75ms-reach-host-cloud-run-two-machines-takes-roughly-2-ms-traverse-one-vm-another-si-q89860925
+4, Put the explanation here
 ___
 28Q:We use end-point authentication to determine with certainty the _________
 * **source**
