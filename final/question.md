@@ -6,19 +6,15 @@ ___
 A: 3. UDP Requires 0, TCP requires 3.
 ___
 3Q:What are the generally accepted characteristics of message segmentation in terms of the following? (time count when applicable)\
-A: chegg this https://www.chegg.com/homework-help/questions-and-answers/generally-accepted-characteristics-message-segmentation-terms-following-time-count-applica-q89968937
+A:
 1. _______ overhead
     * more
-    * less/fewer
 2. _______ retransmission
-    * more
     * less/fewer
 3. _______ loss
-    * more
     * less/fewer
 4. ________ delay
     * more 
-    * less/fewer
 
 ___
 4Q:Once you purchase your domain name from an Internet registrar, you either can use the name servers they provide or update them with your own name servers and their corresponding IP addresses. The type(s) of these DNS servers is/are\
@@ -54,8 +50,15 @@ today to track their customers’ activities at their site. This is because HTTP
 ___
 6Q:According to the following cwnd graph, we agree that it is completely possible that the transmission round(s) within which the connection experiences a triple-duplicated-ack event are 20, 25, 31 
 ![Alt text](6.png "question")\
-Chegg pls https://www.chegg.com/homework-help/questions-and-answers/congestion-window-cwnd-num-segments-transmission-round-rtt-according-following-cwnd-graph--q90359183
-A: X: t/f???
+A: False\
+Explanation:
+at T=20 we can see window size is reduced from 24 to 2. But in case of triple duplicate ack window should become half of cwnd means it should become 12 not 2.
+
+For T=25 it is falling from 8 to 6 which is not half of 8(cwnd). So it is not triple duplicate ack event.
+
+For T=31 it is leniarly increasing. so there will be no fall and duplicate acks.
+
+So finally answer is false because for answer true all must be triple duplicate ack.
 ___
 7Q:Using traceroute, the source host can reconstruct the route from the source to the destination. For example, there are 10 routers between the source and the destination, the source host will send a total of\
 A: X packets to the destination. Each of these packets will be sent to the destination and marked by a number. These numbers are X. When the i-th router receives the i-th marked packet, it will send a message back to the source. The source will record the name and IP address of the network device that it receives the message from. In addition, the source can determine the round-trip delays to all routers measured in X.
@@ -81,7 +84,15 @@ A: ________
 ___
 10Q: Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection is in the slow-start phase in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](10.png "question")\
-A: Chegg this shit https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-transmission-round-s-value-ssthresh-changes--q89744557
+A: 8,15,22,31,35\
+Explanation: 
+
+Value of threshold changes when either triple duplicate acknowledgement or timeout occurs.
+
+The changes is seen when the window size changes.
+
+From the given diagram, the threshold value change at point 8,15,22,31,35
+
 ___
 11Q:Select the main application-layer protocol and corresponding underlying transport protocol for several popular applications:\
 A: Electronic mail: X,X
@@ -91,13 +102,22 @@ Web browser: X,X
 ___
 12Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection experiences a time-out event in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](12.png "question")\
-Chegg pls https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-transmission-round-s-within-connection-exper-q89745961
-A:
+A:21,34\
+Explanation: 
+
+In case of timeout, congestion window size drops to 1 and TCP enters in slow start phase again.
+
+Here total number of time window size drops to 1 is 2
+
+Thus transmission round during which timeout occured is 21,34
+
 ___
 13Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection is in Fast Recovery phase in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](13.png "question")\
-Chegg pls https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-transmission-round-s-within-connection-fast--q89743985
-A:
+A: 8,15,31\
+Explanation:\
+
+Congestion window size decreases rapidly during this period and grows linearly as the situation improves. Triple acknowledgment causes TCP to enter a rapid recovery mode. The value of the window decreases at around eight and then grows linearly afterward, as seen in the figure. Thus, the rapid recovery phase is 8,15,31 minutes.
 ___
 14Q:You are at home and have in front of you two laptops. You intend to ssh from one computer to another but using the NJIT network. Realistically, select what you need to achieve your goal: 
 
@@ -148,7 +168,10 @@ ___
 A: X. In addition, it can send multiple responses for a single client request. This ability is known as X
 ___
 20Q:The difference between selective repeat and go-back-N is the number of timers it needs tracking. Denote the number of packets sent but not yet ack’ed = a, the number of packets sent and ack’ed = b, the size of the window = N, the number of slots useable but not yet sent = c. What is the number of timers that selective repeat needs tracking at any moment?\
-A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/difference-selective-repeat-go-back-n-number-timers-needs-tracking-denote-number-packets-s-q89965554 
+A: N\
+Explanation:   
+
+In the selective repeat, the number of timers needed is equal to buffer (window size) hence needed timer is N, in another word needed timer is equal to the maximum number of packets it is allowed to send
 ___
 21Q:This is an example of Connectionless Demultiplexing. Type your answer without space in order of the ‘?’ from top to bottom, separated by commas.\
 ![Alt text](21.png "question")\
@@ -206,7 +229,8 @@ A:
 ![164](164.png)
 ___
 24Q:You have four routers connecting to each other in a way that each router can be directly connected to the other three. How many subnets are there in this setup?\
-A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/four-routers-connecting-way-router-directly-connected-three-many-subnets-setup-q89744416
+A: 1024\
+Explanation: For each router there can be 256 subnets and for four routers there will be 1024 subnets.
 ___
 25Q:\
 A: ________
@@ -229,11 +253,23 @@ file which contains URLs for each chunk of a video by bit-rate version. While do
 measure(s) the received bandwidth to determine which URL should be next.
 ___
 26Q:A Content Distribution Networks (CDNs) installs many geographically distributed ______ (a.k.a. proxy servers) throughout the region it services, thereby localizing much of the traffic.\
-A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/fill-blank-1-word-space-front-comma-content-distribution-networks-cdns-installs-many-geogr-q89744144  
+A: Caches\
+Explanation:
+A content delivery network (CDN) refers to a group of geographically distributed servers that work together to provide fast delivery of Internet content. A CDN enables the rapid transfer of the resources needed to load Internet content, including HTML pages, javascript files, stylesheets, images, and videos.web caches are increasingly playing an important role in the internet CDN installs many geographically distributed caches throughout the internet, thereby localizing much of the traffic.
 ___
 27Q:It takes 75ms to reach from your host to the cloud where you run two machines. It takes roughly 2 ms to traverse from one VM to another. Sitting from your home, you ssh into one network then ping the other one. How long in ms will it take roughly after you type ‘ping x.x.x.x’ in the terminal to get the response from the other one?\
-A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/takes-75ms-reach-host-cloud-run-two-machines-takes-roughly-2-ms-traverse-one-vm-another-si-q89860925
-4, Put the explanation here
+A:4\
+Explanation :
+
+We are in Home and On same one Network so,
+
+Both machines are in the same network then it takes 1 Round Trip Time (RTT) to get a response.
+
+1 RTT = Machine 1 to Machine 2 a
+
+nd then Machine 2 to Machine 1.
+
+1 RTT = 2ms + 2ms = 4 ms.
 ___
 28Q:We use end-point authentication to determine with certainty the _________
 * **source**
@@ -251,7 +287,6 @@ to hand-craft a packet with an arbitrary source /destination address and port nu
 
 ___
 29Q:There are M paths from source to destination. Denote R_i_k the transmission rate of link i in path k. No two paths shared the same link. If the server can only use 1 path, what is the maximum throughput?\
-Get explanation if there is one: https://www.chegg.com/homework-help/questions-and-answers/m-paths-source-destination-denote-rik-transmission-rate-link-path-k-two-paths-shared-link--q89962198
 A:
 * max(min{R_i_k}) for i = 1 … M and k = 1 … n 
 * min(max{R_i_k}) for i = 1 … M and k = 1 … n 
@@ -323,10 +358,41 @@ A:X. Any ISP (except for tier-1 ISP) can choose to X  to connect to two or more 
 ___
 38Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.\
 One of the biggest costs of congestion is that _____________ transmission capacity and buffering are wasted for every packet lost _______________.\
-A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/fill-blank-one-word-separate-answer-using-commas-space-front-comma-one-biggest-costs-conge-q89745991
+A: upstream,dropped
+Explanation\
+When a lost packet is dropped, we are wasting the channel capacity along with buffer.
 ___
 39Q:You are requesting a webpage with three images stored in three different servers. One of the images  resides on the same server as the webpage. Assuming that you are using HTTP/1.1, and your web browser can open up to 3 parallel connections. Ignore transmission time, how many persistent TCP connections will you need? And how many RTTs will you need to get the entire web page displayed? Type your answer in the order of the question asked, separated by a comma, no unit of measurement should be used, no space\
-A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/requesting-webpage-three-images-stored-three-different-servers-one-images-resides-server-w-q89745025
+A:idk how she wants it typed
+Explanation:\
+
+
+Following is the sequencing, happening at each RTT :
+
+    t = 0 to RTT-1 :
+        TCP-1 is opened (with 1st server).
+    t = RTT-1 to RTT-2 :
+        Webpage is fetched using TCP-1.
+    t = RTT-2 to RTT-3 :
+        It is found that the webpage references three images.
+        First image is fetched via TCP-1.
+        TCP-1 is closed.
+        TCP-2 is opened (with 2nd server).
+        TCP-3 is opened (with 3rd server)
+    t = RTT-3 to RTT-4 :
+        Second image is fetched via TCP-2.
+        TCP-2 is closed.
+        Third image is fetched via TCP-3.
+        TCP-3 is closed.
+
+Thus, number of (persistent) TCP connections needed
+
+= 3
+
+Total RTTs needed
+
+= 4
+
 ___
 40Q:![Alt text](40.png "question")\
 Suppose there is a router between two hosts and no other traffic than two packets to be sent from host A to host B. Suppose that the red (i.e. thinner) link is the bottleneck link. Also, suppose that the server sends the second packet T second after sending the first packet. Each packet is of L bits. What is min(T) to ensure no queuing in the router between these two hosts?\
@@ -345,7 +411,21 @@ These servers communicate with each other using _________.
 As with most application-layer protocols, it has two sides: client side and server side, both of which run on every mail server.
 ___
 42Q:45 Terabytes need to be sent from Boston to Los Angeles. FedEx overnight will reach the destination in 12.5 hours. If a dedicated link can be used to send the data, what should be its transmission rate (Mbps) to break even?\
-A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/45-terabytes-need-sent-boston-los-angeles-fedex-overnight-reach-destination-125-hours-dedi-q89965501
+A:8,388.6 mb/s
+Explanation:\
+Total Data = 45 Terabytes = 47185920 MB
+Total Time = 12.5 Hours = 12.5*60*60 seconds
+
+Data= 47185920 MB
+Time = 45,000 s
+The Required Transmission Rate(Mb/s) = Data/Time
+MB -> Mb
+47185920*8 = 377487360
+
+Tranmission speed required is
+377487360/45000 Mb/s
+
+= 8,388.6 mb/s
 ___
 43Q:![Alt text](43.png "question")\
 A packet has just arrived. Before it are five packets, one of which has 10 bits already transmitted. All packets are transmitted following FIFO.  How long before the first bit of the red packet is transmitted out? All packets have size L bits. Transmission rate is R.\
@@ -357,15 +437,23 @@ A:
 ___
 44Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection experiences a triple-duplicated-ack event in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](44.png "question")\
+A:Whenever a transmission experiences a triple-duplicate ACK event, the sender/transmitter reduces the congestion window by a predefined limit and the transmission enters a congestion-avoidance phase. In the congestion-avoidance phase, the congestion window is increased by a value of 1 MSS(max. Segment Size) after each successful acknowledgement received from the receiver. Hence, in the congestion-avoidance phase, the graph will increase linearly.
 
-Chegg: https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-transmission-round-s-within-connection-exper-q89998358
-A:
+Now, let's look at the given graph:
+Here, we can see that the congestion window reduces between the following transmission ranges, followed by a congestion-avoidance phase:
+
+    1. 6 to 8
+    2. 13 to 15 and
+    3. 29 to 31
+
+
 ___
 45Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection is in Fast Recovery phase in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](45.png "question")\
+A:8,15,31
+Explanation:-
 
-Chegg: https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-transmission-round-s-within-connection-fast--q89743985
-A:
+Congestion window size decreases rapidly during this period and grows linearly as the situation improves. Triple acknowledgment causes TCP to enter a rapid recovery mode. The value of the window decreases at around eight and then grows linearly afterward, as seen in the figure. Thus, the rapid recovery phase is 8,15,31 minutes.
 ___
 46Q:You are installing Git, a screen shows the following:\
 ![Alt text](46.png "question")\
@@ -377,7 +465,35 @@ A:
 4. The screenshot is not possible technically speaking.
 
 47Q:The router is performing UDP Checksum. It receives the following data: 10101010 10101010 11110000 11110000. Enter the expected checksum.\
-A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/router-performing-udp-checksum-receives-following-data-10101010-10101010-11110000-11110000-q89745210
+A: 0110010001100100
+Explanation:\
+
+
+The checksum is a simple method and not so complex to detect an error but the probability to detect error is low as compared to the CRC method.
+
+UDP header uses the 16-bit checksum and it is used to detect the error in the header of the UDP protocol message.
+
+To calculate the checksum of 'n' bits, we divide the data into the segment of 'n' bits and then add all the segments. Finally, the sum is complemented by using one's complement to get the checksum.
+
+The given 16-bit integer in binary format are:
+
+    1010101010101010
+    1111000011110000
+
+The sum of the given binary numbers is:
+
+1010101010101010+1111000011110000 = 11001101110011010
+
+Since the result consists of 16 bits only, but there are more than 16 bits in the result.
+
+So extra bits are wrapped around.
+
+The final sum is = 1001101110011011
+
+The one's complement of the sum is = 0110010001100100
+
+So, the checksum is = 0110010001100100
+
 
 ___
 48Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.\
