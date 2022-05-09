@@ -42,6 +42,7 @@ today to track their customers’ activities at their site. This is because HTTP
 ___
 6Q:According to the following cwnd graph, we agree that it is completely possible that the transmission round(s) within which the connection experiences a triple-duplicated-ack event are 20, 25, 31 
 ![Alt text](6.png "question")\
+Chegg pls https://www.chegg.com/homework-help/questions-and-answers/congestion-window-cwnd-num-segments-transmission-round-rtt-according-following-cwnd-graph--q90359183
 A: X: t/f???
 ___
 7Q:Using traceroute, the source host can reconstruct the route from the source to the destination. For example, there are 10 routers between the source and the destination, the source host will send a total of\
@@ -65,10 +66,12 @@ Web browser: X,X
 ___
 12Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection experiences a time-out event in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](12.png "question")\
+Chegg pls https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-transmission-round-s-within-connection-exper-q89745961
 A:
 ___
 13Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection is in Fast Recovery phase in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](13.png "question")\
+Chegg pls https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-transmission-round-s-within-connection-fast--q89743985
 A:
 ___
 14Q:You are at home and have in front of you two laptops. You intend to ssh from one computer to another but using the NJIT network. Realistically, select what you need to achieve your goal: 
