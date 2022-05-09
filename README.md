@@ -1,5 +1,4 @@
 # cs-356
-## Huong shit
 
 [Link to html](http://24.184.108.245:420/school.html)
 
@@ -25,6 +24,8 @@ To generate pdf (requires texlive):
 ### Midterm 2
 | Chapters 
 | :----:     
-| [Chapter 3](ch3.md) 
-| [Chapter 4](ch4.md) 
-| [Chapter 5](ch5.md) 
+| [Chapter 3](midterm2/ch3.md)  
+### Final Exam
+| Practice Exam
+| :---:
+| [Exam](final/question.md)
