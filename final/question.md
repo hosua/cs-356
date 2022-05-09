@@ -357,10 +357,14 @@ A:
 ___
 44Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection experiences a triple-duplicated-ack event in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](44.png "question")\
+
+Chegg: https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-transmission-round-s-within-connection-exper-q89998358
 A:
 ___
 45Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection is in Fast Recovery phase in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](45.png "question")\
+
+Chegg: https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-transmission-round-s-within-connection-fast--q89743985
 A:
 ___
 46Q:You are installing Git, a screen shows the following:\
@@ -374,14 +378,6 @@ A:
 
 47Q:The router is performing UDP Checksum. It receives the following data: 10101010 10101010 11110000 11110000. Enter the expected checksum.\
 A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/router-performing-udp-checksum-receives-following-data-10101010-10101010-11110000-11110000-q89745210
-
-1. Convert data into a series of 16-bit integers;
-2. Calculate the sum of all 16-bit integers, allowing for the carry bit wrap around;
-3. Take the 1’s complement of the final sum (flip the bits)
-1010 1010 1010 1010 = AAAA = (10 * 16^3) + (10 * 16^2) + (10 * 16^1) + (10 * 16^0) = 43690
-1111 0000 1111 0000 = F0F0 = (15 * 16^3) + (0 * 16^2) + (15 * 16^1) + (0 * 16^0) = 61680
-43690 + 61680 = 105370 = 1100 1101 1100 1101
-                       = 0011 0010 0011 0010 = 12850
 
 ___
 48Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.\
