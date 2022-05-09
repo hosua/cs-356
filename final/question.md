@@ -22,7 +22,19 @@ A: chegg this https://www.chegg.com/homework-help/questions-and-answers/generall
 
 ___
 4Q:Once you purchase your domain name from an Internet registrar, you either can use the name servers they provide or update them with your own name servers and their corresponding IP addresses. The type(s) of these DNS servers is/are\
-A: X nd the type(s) of DNS records to be inserted into the DNS distributed database include(s) X
+A: ________ 
+* ~~root~~
+* ~~top-level domain~~
+* authoritative
+* local
+
+and the type(s) of DNS records to be inserted into the DNS distributed database include(s) ________
+* NS
+* NS and A
+* ~~NS and MX~~
+* ~~A~~
+* A and MX
+
 ___
 5Q:Most major e-commerce sites use \
 A: Most major e-commerce sites use _______.
@@ -35,9 +47,9 @@ A: Most major e-commerce sites use _______.
 
 today to track their customers’ activities at their site. This is because HTTP itself  _________.
 
-1. does not have RDT
-2. ~~Only limits to several operations: (GET PUT, etc)~~ <---- I believe this one was wrong
-3. is stateless
+1. ~~does not have RDT~~
+2. ~~Only limits to several operations: (GET PUT, etc)~~ 
+3. **is stateless**
 4. has limited memory capabilities
 ___
 6Q:According to the following cwnd graph, we agree that it is completely possible that the transmission round(s) within which the connection experiences a triple-duplicated-ack event are 20, 25, 31 
@@ -52,7 +64,20 @@ ___
 A: X. It can be used to X
 ___
 9Q:You are considering Verizon Fios as your ISP. You notice the difference between Fios and other \
-A: X ISPs. Other ISPs use both coaxial cable and fiber options while Fios offers a 100% fiber-optic network, and was one of the first ISPs to offer 100% “Fiber to the Home” (FTTH) internet services to residential customers. Many other providers use fiber-to-the-node (FTTN) connections, which use fiber cables to carry data to a hub close to your home and then switch to coaxial cables or copper wire for the X.
+A: ________
+* WAN
+* region
+* access
+* ~~LAN~~ <-- One of these were right
+* last mile
+
+ ISPs. Other ISPs use both coaxial cable and fiber options while Fios offers a 100% fiber-optic network, and was one of the first ISPs to offer 100% “Fiber to the Home” (FTTH) internet services to residential customers. Many other providers use fiber-to-the-node (FTTN) connections, which use fiber cables to carry data to a hub close to your home and then switch to coaxial cables or copper wire for the ________.
+ * WAN
+ * region
+ * access
+ * LAN
+ * ~~last mile~~ <-- One of these were right
+
 ___
 10Q: Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection is in the slow-start phase in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](10.png "question")\
@@ -100,7 +125,7 @@ A:
 2. **192.168.256.2 <-- Valid range is 0-255**
 3. 192.168.0.1
 4. 172.29.10.9
-5. 10.1.0.0
+5. ~~10.1.0.0~~
 ___
 17Q:Wireshark is capable of real-time intrusion detection. To determine whether the traffic is normal, the user has to compare Wireshark's network reports against several benchmarks: networks of the same business size and type, previous network reports, network expectations based on original intended design.\
 A: X:t/f???
@@ -128,6 +153,7 @@ ___
 21Q:This is an example of Connectionless Demultiplexing. Type your answer without space in order of the ‘?’ from top to bottom, separated by commas.\
 ![Alt text](21.png "question")\
 A:
+**6428,5775,5775,6428**
 ___
 22Q: 45 Terabytes need to be sent from Boston to Los Angeles. FedEx overnight will reach the destination in 12.5 hours. If a dedicated link can be used to send the data, what should be its transmission rate (Mbps)  to break even?
 
@@ -183,7 +209,24 @@ ___
 A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/four-routers-connecting-way-router-directly-connected-three-many-subnets-setup-q89744416
 ___
 25Q:\
-A: X allows the HTTP server to store a X file which contains URLs for each chunk of a video by bit-rate version. While downloading chunks, X measure(s) the received bandwidth to determine which URL should be next.
+A: ________
+* QUIC
+* DASH
+* DNS
+* DHCP
+
+allows the HTTP server to store a ________
+* dynamic
+* manifes
+* latent
+* hidden
+ 
+file which contains URLs for each chunk of a video by bit-rate version. While downloading chunks, ________
+* both the client and server
+* the server
+* the client
+ 
+measure(s) the received bandwidth to determine which URL should be next.
 ___
 26Q:A Content Distribution Networks (CDNs) installs many geographically distributed ______ (a.k.a. proxy servers) throughout the region it services, thereby localizing much of the traffic.\
 A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/fill-blank-1-word-space-front-comma-content-distribution-networks-cdns-installs-many-geogr-q89744144  
@@ -208,6 +251,7 @@ to hand-craft a packet with an arbitrary source /destination address and port nu
 
 ___
 29Q:There are M paths from source to destination. Denote R_i_k the transmission rate of link i in path k. No two paths shared the same link. If the server can only use 1 path, what is the maximum throughput?\
+Get explanation if there is one: https://www.chegg.com/homework-help/questions-and-answers/m-paths-source-destination-denote-rik-transmission-rate-link-path-k-two-paths-shared-link--q89962198
 A:
 * max(min{R_i_k}) for i = 1 … M and k = 1 … n 
 * min(max{R_i_k}) for i = 1 … M and k = 1 … n 
@@ -219,7 +263,24 @@ ___
 A:
 ___
 31Q:\
-A: X protocol provides the ability to translate hostnames to IP addresses. Without appropriate entries within it, no one can access a website even if it is of a too-big-too-fail company such as facebook.com. It is a X -layer protocol and is a great example of the design philosophy that much of the complexity in the Internet architecture is located at the X of the network.
+A: ________ protocol provides the ability to translate hostnames to IP addresses. 
+* **DNS**
+* BGP
+* ICMP
+* SIP
+  
+Without appropriate entries within it, no one can access a website even if it is of a too-big-too-fail company such as facebook.com. It is a ________
+* network
+* transport
+* physical
+* link
+* **application**
+  
+-layer protocol and is a great example of the design philosophy that much of the complexity in the Internet architecture is located at the ________
+* **edge**
+* core
+
+of the network.
 ___
 32Q: When you watch Netflix, you know that the content is being streamed either from an access ISP or  from a server at a nearby Internet exchange point that has Netflix CDN server rack installed within it. This is possible thanks to the fact that Netflix uses DNS to redirect to connect a particular client to a CDN server.
 
@@ -307,13 +368,21 @@ ___
 What does this tell you about this git installation? Use what you’ve learned in class to choose the best answer.\
 A:
 1. I can use SSH to secure all connections initiated from the Git remote repository via a three-way handshake.
-2. **I can use SSH as a cryptographic network protocol to communicate over the network to clone a repository or make an update to one. 
-This has two benefits: no repetitive authentication potential (i.e. with setup of key pairs) thus saving time, and my connection is secure.**
+2. **I can use SSH as a cryptographic network protocol to communicate over the network to clone a repository or make an update to one. This has two benefits: no repetitive authentication potential (i.e. with setup of key pairs) thus saving time, and my connection is secure.**
 3. I can use SSH as a cryptographic network protocol to communicate over the network to clone a repository or make an update to one. This has one benefit: my connection is secure.
 4. The screenshot is not possible technically speaking.
 
 47Q:The router is performing UDP Checksum. It receives the following data: 10101010 10101010 11110000 11110000. Enter the expected checksum.\
 A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/router-performing-udp-checksum-receives-following-data-10101010-10101010-11110000-11110000-q89745210
+
+1. Convert data into a series of 16-bit integers;
+2. Calculate the sum of all 16-bit integers, allowing for the carry bit wrap around;
+3. Take the 1’s complement of the final sum (flip the bits)
+1010 1010 1010 1010 = AAAA = (10 * 16^3) + (10 * 16^2) + (10 * 16^1) + (10 * 16^0) = 43690
+1111 0000 1111 0000 = F0F0 = (15 * 16^3) + (0 * 16^2) + (15 * 16^1) + (0 * 16^0) = 61680
+43690 + 61680 = 105370 = 1100 1101 1100 1101
+                       = 0011 0010 0011 0010 = 12850
+
 ___
 48Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.\
 TCP _______ limits the amount of unACKed data to TCP ________’s free buffer space to ensure the buffer will not overflow. It will have to track two variables, they are lastbysent and lastbyteacked\
