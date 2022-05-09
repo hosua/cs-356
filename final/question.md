@@ -328,7 +328,11 @@ ___
 ___
 33Q:Based on the provided graph following TCP Reno, enter the transmission round(s) at which the value of ssthresh changes in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.\
 ![Alt text](33.png "question")\
-A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-transmission-round-s-value-ssthresh-changes--q89744557
+A:8,15,22,31,35
+Explanation:\
+Value of threshold changes when either triple duplicate acknowledgement or timeout occurs.
+
+The changes is seen when the window size changes.
 ___
 34Q:Given\
 d: distance between each pair of network devices\
@@ -356,7 +360,11 @@ A:
 ___
 36Q:Based on the provided graph following TCP Reno, enter the minimum value of ssthresh. Initial ssthresh = 8.\
 ![Alt text](36.png "question")\
-A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/based-provided-graph-following-tcp-reno-enter-minimum-value-ssthresh-initial-ssthresh-8-q89745332
+A:4.75
+Explanation:
+ssthresh is equal to after transmission round = 10.
+
+the cwnd value at transmission round 10, is 9.5, which divided by 2 = 9.5/2 = 4.75
 ___
 37Q:Multiple ISPs can peer together at\
 A:**IXP**. Any ISP (except for tier-1 ISP) can choose to **multi-home** to connect to two or more provider ISPs. This means that in the event that one of its provider IPSs is down, it can still continue to send and receive packets into the Internet.
@@ -507,7 +515,7 @@ So, the checksum is = 0110010001100100
 ___
 48Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.\
 TCP _______ limits the amount of unACKed data to TCP ________’s free buffer space to ensure the buffer will not overflow. It will have to track two variables, they are lastbysent and lastbyteacked\
-A: Chegg: https://www.chegg.com/homework-help/questions-and-answers/fill-blank-one-word-separate-answer-using-commas-space-front-comma-tcp-limits-amount-unack-q89745793 
+A:TCP Reciever Window, TCP Flow Control
 ___
 49Q:In general, an application-layer protocol does NOT define:
 
