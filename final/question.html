@@ -1,0 +1,541 @@
+<hr>
+<p>1Q: You bring two laptops to NJIT, you intend to ssh from one computer to another, select what networking technologies you’ve learnt in CS356 that would NOT be involved in achieving this goal:<br>
+A:</p>
+<ul>
+<li><strong>HTTPS</strong></li>
+<li>~~DHCP~~</li>
+<li>~~NAT~~</li>
+<li>ssh/openSSH</li>
+<li>ifconfig/ipconfig</li>
+</ul>
+<hr>
+<p>2Q:How many more handshakes happen for a connection employing TCP than a connection employing UDP?<br>
+A: 3. UDP Requires 0, TCP requires 3.</p>
+<hr>
+<p>3Q:What are the generally accepted characteristics of message segmentation in terms of the following? (time count when applicable)<br>
+A:</p>
+<ol>
+<li>_______ overhead<ul>
+<li>more</li>
+</ul>
+</li>
+<li>_______ retransmission<ul>
+<li>less/fewer</li>
+</ul>
+</li>
+<li>_______ loss<ul>
+<li>less/fewer</li>
+</ul>
+</li>
+<li>________ delay<ul>
+<li>more</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>4Q:Once you purchase your domain name from an Internet registrar, you either can use the name servers they provide or update them with your own name servers and their corresponding IP addresses. The type(s) of these DNS servers is/are<br>
+A: ________</p>
+<ul>
+<li>~~root~~</li>
+<li>~~top-level domain~~</li>
+<li><strong>authoritative</strong></li>
+<li>local</li>
+</ul>
+<p>and the type(s) of DNS records to be inserted into the DNS distributed database include(s) ________</p>
+<ul>
+<li>NS</li>
+<li><strong>NS and A</strong></li>
+<li>~~NS and MX~~</li>
+<li>~~A~~</li>
+<li>A and MX</li>
+</ul>
+<hr>
+<p>5Q:Most major e-commerce sites use <br>
+A: Most major e-commerce sites use _______.</p>
+<ol>
+<li>proxy servers</li>
+<li><strong>cookies</strong> &lt;-- I believe this was right, not 100%. (I double checked, this is right)</li>
+<li>extra memory</li>
+<li>caches</li>
+<li>load balancers</li>
+</ol>
+<p>today to track their customers’ activities at their site. This is because HTTP itself  _________.</p>
+<ol>
+<li>~~does not have RDT~~</li>
+<li>~~Only limits to several operations: (GET PUT, etc)~~</li>
+<li><strong>is stateless</strong></li>
+<li>has limited memory capabilities</li>
+</ol>
+<hr>
+<p>6Q:According to the following cwnd graph, we agree that it is completely possible that the transmission round(s) within which the connection experiences a triple-duplicated-ack event are 20, 25, 31
+<img src="6.png" alt="Alt text" title="question"><br>
+A: False<br>
+Explanation:
+at T=20 we can see window size is reduced from 24 to 2. But in case of triple duplicate ack window should become half of cwnd means it should become 12 not 2.</p>
+<p>For T=25 it is falling from 8 to 6 which is not half of 8(cwnd). So it is not triple duplicate ack event.</p>
+<p>For T=31 it is leniarly increasing. so there will be no fall and duplicate acks.</p>
+<p>So finally answer is false because for answer true all must be triple duplicate ack.</p>
+<hr>
+<p>7Q:Using traceroute, the source host can reconstruct the route from the source to the destination. For example, there are 10 routers between the source and the destination, the source host will send a total of<br>
+A: _______ packets to the destination. Each of these packets will be sent to the destination and marked by a number. These numbers are X. When the i-th router receives the i-th marked packet, it will send a message back to the source. The source will record the name and IP address of the network device that it receives the message from. In addition, the source can determine the round-trip delays to all routers measured in _______.<br>
+33,in sequence,miliseconds,</p>
+<hr>
+<p>8Q:You walk down the electronic aisle in a shopping center, you pick up a device that boasts the following: “Homes come in all shapes and sizes. This device is designed to provide medium-sized homes with superior WiFi connectivity for fast, lag-free gaming, video streaming, and surfing. Certified with Xfinity with speeds up to 200Mbps and with Cox service speeds of 150Mbps. (This product does not support home phone services from cable providers).” Based on this description, the type of this network device is<br>
+A: <strong>a wifi-router and modem combo</strong>. It can be used to <strong>connect with listed ISPs and wireless devices inside my home</strong></p>
+<hr>
+<p>9Q:You are considering Verizon Fios as your ISP. You notice the difference between Fios and other <br>
+A: ________</p>
+<ul>
+<li>WAN</li>
+<li>region</li>
+<li>access</li>
+<li><strong>LAN</strong></li>
+<li>last mile</li>
+</ul>
+<p>ISPs. Other ISPs use both coaxial cable and fiber options while Fios offers a 100% fiber-optic network, and was one of the first ISPs to offer 100% “Fiber to the Home” (FTTH) internet services to residential customers. Many other providers use fiber-to-the-node (FTTN) connections, which use fiber cables to carry data to a hub close to your home and then switch to coaxial cables or copper wire for the ________.</p>
+<ul>
+<li>WAN</li>
+<li>region</li>
+<li><strong>access</strong></li>
+<li>LAN</li>
+<li>last mile</li>
+</ul>
+<hr>
+<p>10Q: Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection is in the slow-start phase in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.<br>
+<img src="10.png" alt="Alt text" title="question"><br>
+A: 8,15,22,31,35<br>
+Explanation:</p>
+<p>Value of threshold changes when either triple duplicate acknowledgement or timeout occurs.</p>
+<p>The changes is seen when the window size changes.</p>
+<p>From the given diagram, the threshold value change at point 8,15,22,31,35</p>
+<hr>
+<p>11Q:Select the main application-layer protocol and corresponding underlying transport protocol for several popular applications:<br>
+A: Electronic mail: SMTP,TCP
+Remote terminal access: Telnet,TCP
+Streaming multimedia: DASH,TCP
+Web browser: HTTP,TCP</p>
+<hr>
+<p>12Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection experiences a time-out event in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.<br>
+<img src="12.png" alt="Alt text" title="question"><br>
+A:21,34<br>
+Explanation:</p>
+<p>In case of timeout, congestion window size drops to 1 and TCP enters in slow start phase again.</p>
+<p>Here total number of time window size drops to 1 is 2</p>
+<p>Thus transmission round during which timeout occured is 21,34</p>
+<hr>
+<p>13Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection is in Fast Recovery phase in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.<br>
+<img src="13.png" alt="Alt text" title="question"><br>
+A: 8,15,31<br>
+Explanation:\</p>
+<p>Congestion window size decreases rapidly during this period and grows linearly as the situation improves. Triple acknowledgment causes TCP to enter a rapid recovery mode. The value of the window decreases at around eight and then grows linearly afterward, as seen in the figure. Thus, the rapid recovery phase is 8,15,31 minutes.</p>
+<hr>
+<p>14Q:You are at home and have in front of you two laptops. You intend to ssh from one computer to another but using the NJIT network. Realistically, select what you need to achieve your goal:</p>
+<p>To obtain an IP address internally to NJIT:</p>
+<ol>
+<li>Cisco AnyConnect</li>
+<li><strong>DHCP Server</strong></li>
+</ol>
+<p>To ssh from client to server:</p>
+<ol>
+<li><strong>openSSH</strong></li>
+<li>LAN</li>
+<li>RSA</li>
+<li>IMAP</li>
+</ol>
+<hr>
+<p>15Q:You notice that Netflix offers its services in other regions of the world. You know that your account can be used worldwide but Netflix servers will determine the content you can watch based on the IP address it can see from your host. You are determined to watch programs that are not yet available in the US. Thus, you think of purchasing the right to access a __________ in the region which contains the content you want to watch.\</p>
+<p>A:
+<strong>VPN</strong></p>
+<hr>
+<p>16Q:When you bring your laptop to NJIT, applying what we’ve learned in class (not in reality), which of the following values is NOT a possible IP address your laptop will obtain from NJIT’s network?</p>
+<h1>There was another answer to this question</h1>
+<p>A:</p>
+<ol>
+<li>123.45.67.89</li>
+<li><strong>192.168.256.2 &lt;-- Valid range is 0-255</strong></li>
+<li>192.168.0.1</li>
+<li>172.29.10.9</li>
+<li>~~10.1.0.0~~</li>
+</ol>
+<hr>
+<p>17Q:Wireshark is capable of real-time intrusion detection. To determine whether the traffic is normal, the user has to compare Wireshark's network reports against several benchmarks: networks of the same business size and type, previous network reports, network expectations based on original intended design.<br>
+A: False</p>
+<hr>
+<p>18Q:Content creators upload to Youtube several million videos everyday.
+They upload their videos from client to server over __________</p>
+<ol>
+<li><strong>HTTP</strong></li>
+<li>IMAP</li>
+<li>DASH</li>
+<li>SMTP</li>
+</ol>
+<p>Not only that, YouTube videos streamed from server to client over  __________</p>
+<ol>
+<li>~~DASH~~</li>
+<li><strong>HTTP</strong></li>
+<li>TCP</li>
+<li>BGP</li>
+</ol>
+<hr>
+<p>19Q:HTTP/2 solves the Head-of-line blocking by breaking each message into small frames, and interleaving the request and response messages on<br>
+A: X. In addition, it can send multiple responses for a single client request. This ability is known as X</p>
+<hr>
+<p>20Q:The difference between selective repeat and go-back-N is the number of timers it needs tracking. Denote the number of packets sent but not yet ack’ed = a, the number of packets sent and ack’ed = b, the size of the window = N, the number of slots useable but not yet sent = c. What is the number of timers that selective repeat needs tracking at any moment?<br>
+A: N<br>
+Explanation:</p>
+<p>In the selective repeat, the number of timers needed is equal to buffer (window size) hence needed timer is N, in another word needed timer is equal to the maximum number of packets it is allowed to send</p>
+<hr>
+<p>21Q:This is an example of Connectionless Demultiplexing. Type your answer without space in order of the ‘?’ from top to bottom, separated by commas.<br>
+<img src="21.png" alt="Alt text" title="question"><br>
+A:
+<strong>6428,5775,5775,6428</strong></p>
+<hr>
+<p>22Q: 45 Terabytes need to be sent from Boston to Los Angeles. FedEx overnight will reach the destination in 12.5 hours. If a dedicated link can be used to send the data, what should be its transmission rate (Mbps)  to break even?</p>
+<pre><code>Note that Mbps != MBps. 
+Little b represents bits
+Big B represents bytes
+
+1 Byte = 8 bits
+</code></pre>
+<p>Common units</p>
+<p>| Kilo | 10^3  |
+|------|-------|
+| Mega | 10^6  |
+| Giga | 10^9  |
+| Tera | 10^12 |</p>
+<p>Units used:</p>
+<pre><code>Mega = 10^6
+Tera = 10^12
+</code></pre>
+<ol>
+<li>Convert terabytes to bits (not bytes)</li>
+</ol>
+<p>Conversion from <code>TeraByte-&gt;Bit</code> = <code>45*(10^12)*8</code> = <code>3.6*(10^14) bits</code></p>
+<ol start="2">
+<li>Divide total bits by our unit size (Megabit = 10^6) to get the number megabits</li>
+</ol>
+<p><code>(3.6(10^14))/(10^6) = 3.6*(10^8) Megabits</code></p>
+<ol start="3">
+<li><p>Convert time to seconds
+Time in hours: 12.5
+<code>(12.5 hours) * (60 minutes) * (60 seconds) = 45000 seconds</code></p>
+</li>
+<li><p>Calculate transmission rate (size/time)</p>
+</li>
+</ol>
+<p><code>(3.6*(10^8))/45000 = 8000 Mbps (megabits per second)</code></p>
+<hr>
+<p>23Q:There are M paths from source to destination. Denote R_i_k the transmission rate of link i in path k. No two paths shared the same link. If the server can use all paths, what is the maximum throughput?<br>
+A:</p>
+<ul>
+<li>max(sum{R_i_k}) for i = 1 … M and k = 1 … n</li>
+<li>sum(product{R_i_k}) for i = 1… n and k = 1 … M</li>
+<li>sum(max{R_i_k}) for i = 1 … M and k = 1 … n</li>
+<li>product(min{R_i_k}) for i = 1 … n and k = 1 … M</li>
+<li><strong>sum(min{R_i_k}) for i = 1 … n and k = 1 … M</strong>
+<img src="164.png" alt="164"></li>
+</ul>
+<hr>
+<p>24Q:You have four routers connecting to each other in a way that each router can be directly connected to the other three. How many subnets are there in this setup?<br>
+A: 1024<br>
+Explanation: For each router there can be 256 subnets and for four routers there will be 1024 subnets.</p>
+<hr>
+<p>25Q:<br>
+A: ________</p>
+<ul>
+<li>QUIC</li>
+<li><strong>DASH</strong></li>
+<li>DNS</li>
+<li>DHCP</li>
+</ul>
+<p>allows the HTTP server to store a ________</p>
+<ul>
+<li>dynamic</li>
+<li><strong>manifest</strong></li>
+<li>latent</li>
+<li>hidden</li>
+</ul>
+<p>file which contains URLs for each chunk of a video by bit-rate version. While downloading chunks, ________</p>
+<ul>
+<li>both the client and server</li>
+<li>the server</li>
+<li><strong>the client</strong></li>
+</ul>
+<p>measure(s) the received bandwidth to determine which URL should be next.</p>
+<hr>
+<p>26Q:A Content Distribution Networks (CDNs) installs many geographically distributed ______ (a.k.a. proxy servers) throughout the region it services, thereby localizing much of the traffic.<br>
+A: Caches<br>
+Explanation:
+A content delivery network (CDN) refers to a group of geographically distributed servers that work together to provide fast delivery of Internet content. A CDN enables the rapid transfer of the resources needed to load Internet content, including HTML pages, javascript files, stylesheets, images, and videos.web caches are increasingly playing an important role in the internet CDN installs many geographically distributed caches throughout the internet, thereby localizing much of the traffic.</p>
+<hr>
+<p>27Q:It takes 75ms to reach from your host to the cloud where you run two machines. It takes roughly 2 ms to traverse from one VM to another. Sitting from your home, you ssh into one network then ping the other one. How long in ms will it take roughly after you type ‘ping x.x.x.x’ in the terminal to get the response from the other one?<br>
+A:4<br>
+Explanation :</p>
+<p>We are in Home and On same one Network so,</p>
+<p>Both machines are in the same network then it takes 1 Round Trip Time (RTT) to get a response.</p>
+<p>1 RTT = Machine 1 to Machine 2 a</p>
+<p>nd then Machine 2 to Machine 1.</p>
+<p>1 RTT = 2ms + 2ms = 4 ms.</p>
+<hr>
+<p>28Q:We use end-point authentication to determine with certainty the _________</p>
+<ul>
+<li><strong>source</strong></li>
+<li>destination</li>
+</ul>
+<p>of a message. Authentication is needed because it is ________</p>
+<ul>
+<li>sometimes possible</li>
+<li><strong>easy</strong></li>
+</ul>
+<p>to hand-craft a packet with an arbitrary source /destination address and port number. This ability is known as _________</p>
+<ul>
+<li>injecting</li>
+<li>self-replicating</li>
+<li><strong>IP spoofing</strong></li>
+<li>man-in-the-middle</li>
+</ul>
+<hr>
+<p>29Q:There are M paths from source to destination. Denote R_i_k the transmission rate of link i in path k. No two paths shared the same link. If the server can only use 1 path, what is the maximum throughput?<br>
+A:</p>
+<ul>
+<li>max(min{R_i_k}) for i = 1 … M and k = 1 … n</li>
+<li>min(max{R_i_k}) for i = 1 … M and k = 1 … n</li>
+<li>min(max{R_i_k}) for i = 1 … n and k = 1 … M</li>
+<li><strong>max(min{R_i_k}) for i = 1 ... n and k = 1 … M</strong></li>
+</ul>
+<hr>
+<p>30Q:Based on the provided graph following TCP Reno, enter the transmission round(s) at which the value of ssthresh changes in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'.Initial ssthresh = 8.<br>
+<img src="30.png" alt="Alt text" title="question"><br>
+A:</p>
+<hr>
+<p>31Q:<br>
+A: ________ protocol provides the ability to translate hostnames to IP addresses.</p>
+<ul>
+<li><strong>DNS</strong></li>
+<li>BGP</li>
+<li>ICMP</li>
+<li>SIP</li>
+</ul>
+<p>Without appropriate entries within it, no one can access a website even if it is of a too-big-too-fail company such as facebook.com. It is a ________</p>
+<ul>
+<li>network</li>
+<li>transport</li>
+<li>physical</li>
+<li>link</li>
+<li><strong>application</strong></li>
+</ul>
+<p>-layer protocol and is a great example of the design philosophy that much of the complexity in the Internet architecture is located at the ________</p>
+<ul>
+<li><strong>edge</strong></li>
+<li>core</li>
+</ul>
+<p>of the network.</p>
+<hr>
+<p>32Q: When you watch Netflix, you know that the content is being streamed either from an access ISP or  from a server at a nearby Internet exchange point that has Netflix CDN server rack installed within it. This is possible thanks to the fact that Netflix uses DNS to redirect to connect a particular client to a CDN server.</p>
+<p><strong>False</strong></p>
+<hr>
+<p>33Q:Based on the provided graph following TCP Reno, enter the transmission round(s) at which the value of ssthresh changes in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.<br>
+<img src="33.png" alt="Alt text" title="question"><br>
+A:8,15,22,31,35
+Explanation:<br>
+Value of threshold changes when either triple duplicate acknowledgement or timeout occurs.</p>
+<p>The changes is seen when the window size changes.</p>
+<hr>
+<p>34Q:Given<br>
+d: distance between each pair of network devices<br>
+R: the link’s transmission rate<br>
+a: average rate of arrival<br>
+L: packet length<br>
+s: propagation speed<br>
+t1: time to examine packet’s header to determine forwarding action<br>
+t2: time to perform bit-level error check<br>
+Identify the types of delay in packet-switched networks. Choose all that apply.<br>
+A:</p>
+<ul>
+<li><strong>Transmission delay = L/R</strong></li>
+<li><strong>Propagation delay = s/d</strong></li>
+<li><strong>Processing delay = t1 + t2</strong></li>
+<li><strong>Queuing delay (varies at each node)</strong></li>
+</ul>
+<hr>
+<p>35Q:For the vast number of technological start-ups, which layer are they mostly working in considering the five-layer Internet protocol stack?<br>
+A:</p>
+<ul>
+<li>Network layer</li>
+<li>Link layer</li>
+<li>Physical layer</li>
+<li><strong>Application layer</strong></li>
+<li>Transport layer</li>
+</ul>
+<hr>
+<p>36Q:Based on the provided graph following TCP Reno, enter the minimum value of ssthresh. Initial ssthresh = 8.<br>
+<img src="36.png" alt="Alt text" title="question"><br>
+A:4.75
+Explanation:
+ssthresh is equal to after transmission round = 10.</p>
+<p>the cwnd value at transmission round 10, is 9.5, which divided by 2 = 9.5/2 = 4.75</p>
+<hr>
+<p>37Q:Multiple ISPs can peer together at<br>
+A:<strong>IXP</strong>. Any ISP (except for tier-1 ISP) can choose to <strong>multi-home</strong> to connect to two or more provider ISPs. This means that in the event that one of its provider IPSs is down, it can still continue to send and receive packets into the Internet.</p>
+<hr>
+<p>38Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.<br>
+One of the biggest costs of congestion is that _____________ transmission capacity and buffering are wasted for every packet lost _______________.<br>
+A: upstream,dropped
+Explanation<br>
+When a lost packet is dropped, we are wasting the channel capacity along with buffer.</p>
+<hr>
+<p>39Q:You are requesting a webpage with three images stored in three different servers. One of the images  resides on the same server as the webpage. Assuming that you are using HTTP/1.1, and your web browser can open up to 3 parallel connections. Ignore transmission time, how many persistent TCP connections will you need? And how many RTTs will you need to get the entire web page displayed? Type your answer in the order of the question asked, separated by a comma, no unit of measurement should be used, no space<br>
+A:idk how she wants it typed
+Explanation:\</p>
+<p>Following is the sequencing, happening at each RTT :</p>
+<pre><code>t = 0 to RTT-1 :
+    TCP-1 is opened (with 1st server).
+t = RTT-1 to RTT-2 :
+    Webpage is fetched using TCP-1.
+t = RTT-2 to RTT-3 :
+    It is found that the webpage references three images.
+    First image is fetched via TCP-1.
+    TCP-1 is closed.
+    TCP-2 is opened (with 2nd server).
+    TCP-3 is opened (with 3rd server)
+t = RTT-3 to RTT-4 :
+    Second image is fetched via TCP-2.
+    TCP-2 is closed.
+    Third image is fetched via TCP-3.
+    TCP-3 is closed.
+</code></pre>
+<p>Thus, number of (persistent) TCP connections needed</p>
+<p>= 3</p>
+<p>Total RTTs needed</p>
+<p>= 4</p>
+<hr>
+<p>40Q:<img src="40.png" alt="Alt text" title="question"><br>
+Suppose there is a router between two hosts and no other traffic than two packets to be sent from host A to host B. Suppose that the red (i.e. thinner) link is the bottleneck link. Also, suppose that the server sends the second packet T second after sending the first packet. Each packet is of L bits. What is min(T) to ensure no queuing in the router between these two hosts?<br>
+A:</p>
+<ul>
+<li><strong>L/R_c - L/R_s</strong></li>
+<li>L/(R_c - R_s)</li>
+<li>L/R_s - L/R_c</li>
+<li>L/(R_s - R_c)</li>
+</ul>
+<hr>
+<p>41Q:Mail servers form the core of the e-mail  _______</p>
+<ul>
+<li><strong>infrastructure</strong></li>
+<li>architecture</li>
+<li>backbone</li>
+</ul>
+<p>These servers communicate with each other using _________.</p>
+<ul>
+<li><strong>SMTP</strong></li>
+<li>HTTPS</li>
+<li>mail agent</li>
+<li>IMAP
+As with most application-layer protocols, it has two sides: client side and server side, both of which run on every mail server.</li>
+</ul>
+<hr>
+<p>42Q:45 Terabytes need to be sent from Boston to Los Angeles. FedEx overnight will reach the destination in 12.5 hours. If a dedicated link can be used to send the data, what should be its transmission rate (Mbps) to break even?<br>
+A:8,388.6 mb/s
+Explanation:<br>
+Total Data = 45 Terabytes = 47185920 MB
+Total Time = 12.5 Hours = 12.5<em>60</em>60 seconds</p>
+<p>Data= 47185920 MB
+Time = 45,000 s
+The Required Transmission Rate(Mb/s) = Data/Time
+MB -&gt; Mb
+47185920*8 = 377487360</p>
+<p>Tranmission speed required is
+377487360/45000 Mb/s</p>
+<p>= 8,388.6 mb/s</p>
+<hr>
+<p>43Q:<img src="43.png" alt="Alt text" title="question"><br>
+A packet has just arrived. Before it are five packets, one of which has 10 bits already transmitted. All packets are transmitted following FIFO.  How long before the first bit of the red packet is transmitted out? All packets have size L bits. Transmission rate is R.<br>
+A:</p>
+<ul>
+<li>(4*L-10)/R</li>
+<li>5*L/R - 10</li>
+<li><strong>(5*L-10)/R</strong></li>
+<li>5*L/R</li>
+</ul>
+<hr>
+<p>44Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection experiences a triple-duplicated-ack event in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.<br>
+<img src="44.png" alt="Alt text" title="question"><br>
+A:Whenever a transmission experiences a triple-duplicate ACK event, the sender/transmitter reduces the congestion window by a predefined limit and the transmission enters a congestion-avoidance phase. In the congestion-avoidance phase, the congestion window is increased by a value of 1 MSS(max. Segment Size) after each successful acknowledgement received from the receiver. Hence, in the congestion-avoidance phase, the graph will increase linearly.</p>
+<p>Now, let's look at the given graph:
+Here, we can see that the congestion window reduces between the following transmission ranges, followed by a congestion-avoidance phase:</p>
+<pre><code>1. 6 to 8
+2. 13 to 15 and
+3. 29 to 31
+</code></pre>
+<hr>
+<p>45Q:Based on the provided graph following TCP Reno, enter the transmission round(s) within which the connection is in Fast Recovery phase in ascending order. Separate each round number with a ',' without space. No comma should follow the last entry. If no transmission round applies, enter '0'. Initial ssthresh = 8.<br>
+<img src="45.png" alt="Alt text" title="question"><br>
+A:8,15,31
+Explanation:-</p>
+<p>Congestion window size decreases rapidly during this period and grows linearly as the situation improves. Triple acknowledgment causes TCP to enter a rapid recovery mode. The value of the window decreases at around eight and then grows linearly afterward, as seen in the figure. Thus, the rapid recovery phase is 8,15,31 minutes.</p>
+<hr>
+<p>46Q:You are installing Git, a screen shows the following:<br>
+<img src="46.png" alt="Alt text" title="question"><br>
+What does this tell you about this git installation? Use what you’ve learned in class to choose the best answer.<br>
+A:</p>
+<ol>
+<li>I can use SSH to secure all connections initiated from the Git remote repository via a three-way handshake.</li>
+<li><strong>I can use SSH as a cryptographic network protocol to communicate over the network to clone a repository or make an update to one. This has two benefits: no repetitive authentication potential (i.e. with setup of key pairs) thus saving time, and my connection is secure.</strong></li>
+<li>I can use SSH as a cryptographic network protocol to communicate over the network to clone a repository or make an update to one. This has one benefit: my connection is secure.</li>
+<li>The screenshot is not possible technically speaking.</li>
+</ol>
+<p>47Q:The router is performing UDP Checksum. It receives the following data: 10101010 10101010 11110000 11110000. Enter the expected checksum.<br>
+A: 0110010001100100
+Explanation:\</p>
+<p>The checksum is a simple method and not so complex to detect an error but the probability to detect error is low as compared to the CRC method.</p>
+<p>UDP header uses the 16-bit checksum and it is used to detect the error in the header of the UDP protocol message.</p>
+<p>To calculate the checksum of 'n' bits, we divide the data into the segment of 'n' bits and then add all the segments. Finally, the sum is complemented by using one's complement to get the checksum.</p>
+<p>The given 16-bit integer in binary format are:</p>
+<pre><code>1010101010101010
+1111000011110000
+</code></pre>
+<p>The sum of the given binary numbers is:</p>
+<p>1010101010101010+1111000011110000 = 11001101110011010</p>
+<p>Since the result consists of 16 bits only, but there are more than 16 bits in the result.</p>
+<p>So extra bits are wrapped around.</p>
+<p>The final sum is = 1001101110011011</p>
+<p>The one's complement of the sum is = 0110010001100100</p>
+<p>So, the checksum is = 0110010001100100</p>
+<hr>
+<p>48Q:Fill in each blank with one word. Separate your answer using commas. No space in front of or after a comma.<br>
+TCP _______ limits the amount of unACKed data to TCP ________’s free buffer space to ensure the buffer will not overflow. It will have to track two variables, they are lastbysent and lastbyteacked<br>
+A:TCP Reciever Window, TCP Flow Control</p>
+<hr>
+<p>49Q:In general, an application-layer protocol does NOT define:</p>
+<p>A:</p>
+<ol>
+<li>The syntax of various message types</li>
+<li>~~The sequence of message exchanged~~</li>
+<li>The type of messages exchanged</li>
+<li>The usage of each field</li>
+<li>The format of the message exchanged</li>
+<li>The content of the format of message exchange</li>
+<li><strong>Rules of when and how a message is sent or received</strong></li>
+</ol>
+<hr>
+<p>50Q:You are installing Git, a screen shows the following:<br>
+<img src="50.png" alt="Alt text" title="question"><br>
+What does this tell you about this git installation? Use what you’ve learned in class to choose the best answer. \</p>
+<p>A:
+This means Git uses HTTPS, a secure communication ________</p>
+<ol>
+<li><strong>PROTOCOL</strong></li>
+<li>channel</li>
+<li>language</li>
+<li>setup</li>
+</ol>
+<p>where two machines can communicate securely over the network by encrypting the data in the _________</p>
+<ol>
+<li><strong>APPLICATION</strong></li>
+<li>link</li>
+<li>transport</li>
+<li>physical</li>
+<li>network</li>
+</ol>
+<p>layer to provide privacy and data integrity between two or more communicating computer applications.</p>
+<hr>
